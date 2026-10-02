@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>멍청이 공룡</title>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#d9f0c8;--ink:#2f4a2a;--bub:#fff;--me:#ffd36b;--meink:#2b2208;--chip:#eaf8dc;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f2f1c;--ink:#e2f3d6;--bub:#2d4429;--me:#9a7a1c;--meink:#fff6d6;--chip:#2a3f26}}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Jua","Apple SD Gothic Neo","Malgun Gothic",sans-serif;display:flex;flex-direction:column;max-width:520px;margin:0 auto}
+#stage{position:relative;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;padding:14px 12px 0}
+#bub{position:relative;background:var(--bub);border:3px solid var(--ink);border-radius:20px;padding:4px 18px;font-size:26px;min-height:46px;margin-bottom:12px;max-width:92%;text-align:center;word-break:keep-all}
+#bub::after{content:"";position:absolute;left:50%;bottom:-10px;width:14px;height:14px;margin-left:-7px;background:var(--bub);border:solid var(--ink);border-width:0 3px 3px 0;transform:rotate(45deg)}
+.pop{animation:pop .35s ease-out}
+@keyframes pop{0%{transform:scale(.5)}60%{transform:scale(1.12)}100%{transform:scale(1)}}
+#wrap{width:min(200px,32vh);cursor:pointer;transform-origin:50% 100%;-webkit-tap-highlight-color:transparent}
+#dino{width:100%;height:auto;display:block;overflow:visible}
+#tail{transform-origin:150px 135px;animation:wag 1.6s ease-in-out infinite}
+#armR{transform-origin:150px 128px}
+#eyes{transform-box:fill-box;transform-origin:center;animation:blink 4.2s infinite}
+.sleep #eyes{animation:none;transform:scaleY(.1)}
+#mo{display:none}
+.open #mo{display:inline}.open #mc{display:none}
+@keyframes wag{50%{transform:rotate(9deg)}}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.08)}}
+.idle{animation:breathe 2.4s ease-in-out infinite}
+.roar{animation:roar .8s ease-out}
+.stomp{animation:stomp .7s ease-out}
+.spin{animation:spin .8s ease-in-out}
+.sleepy{animation:sleepy 1.6s ease-in-out}
+.tilt{animation:tilt .9s ease-in-out}
+.shy{animation:shy .9s ease-in-out}
+.wave{animation:hop .6s ease-out}
+.wave #armR{animation:waveArm .25s ease-in-out 4}
+@keyframes breathe{50%{transform:scaleY(1.04) scaleX(.98)}}
+@keyframes roar{0%{transform:scale(1)}20%{transform:scale(1.25) rotate(-6deg)}40%{transform:scale(1.2) rotate(6deg)}60%{transform:scale(1.25) rotate(-4deg)}100%{transform:scale(1)}}
+@keyframes stomp{0%,100%{transform:translateY(0)}25%{transform:translateY(-30px)}45%{transform:translateY(0) scaleY(.85)}65%{transform:translateY(-14px)}85%{transform:translateY(0) scaleY(.92)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes sleepy{0%,100%{transform:rotate(0)}50%{transform:rotate(9deg) translateY(8px)}}
+@keyframes tilt{30%,70%{transform:rotate(-12deg)}}
+@keyframes shy{0%,100%{transform:rotate(0)}20%{transform:rotate(-8deg)}40%{transform:rotate(8deg)}60%{transform:rotate(-8deg) scale(.92)}80%{transform:rotate(6deg)}}
+@keyframes hop{40%{transform:translateY(-18px)}}
+@keyframes waveArm{50%{transform:rotate(-35deg)}}
+.fx{position:absolute;pointer-events:none;font-size:26px;animation:up 1.3s ease-out forwards}
+@keyframes up{to{transform:translate(var(--dx),-90px) scale(1.3);opacity:0}}
+#mute{position:absolute;top:10px;right:12px;width:40px;height:40px;border-radius:50%;border:3px solid var(--ink);background:var(--bub);font-size:18px;cursor:pointer}
+#log{flex:1;overflow-y:auto;padding:10px 14px;display:flex;flex-direction:column;gap:8px}
+.m{max-width:80%;padding:8px 14px;border-radius:18px;font-size:18px;line-height:1.35;word-break:keep-all}
+.me{align-self:flex-end;background:var(--me);color:var(--meink);border-bottom-right-radius:4px}
+.ai{align-self:flex-start;background:var(--bub);border-bottom-left-radius:4px}
+.ai small{display:block;font-size:13px;opacity:.65;margin-top:2px}
+#chips{display:flex;gap:6px;padding:4px 12px;overflow-x:auto}
+.chip{flex:0 0 auto;font:inherit;font-size:15px;color:var(--ink);background:var(--chip);border:2px solid var(--ink);border-radius:999px;padding:4px 12px;cursor:pointer}
+#bar{display:flex;gap:8px;padding:8px 12px 14px}
+#inp{flex:1;font:inherit;font-size:18px;padding:11px 16px;border:3px solid var(--ink);border-radius:999px;background:var(--bub);color:var(--ink);min-width:0}
+#go{font:inherit;font-size:18px;border:3px solid var(--ink);background:#7ccf6a;color:#17300f;border-radius:999px;padding:0 20px;cursor:pointer}
+#go:active,.chip:active{transform:scale(.94)}
+#inp:focus-visible,#go:focus-visible,.chip:focus-visible,#mute:focus-visible{outline:3px solid #ff8a5b;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div id="stage">
+ <button id="mute" type="button" aria-label="소리 켜기/끄기">🔊</button>
+ <div id="bub" class="pop">크앙?</div>
+ <div id="wrap" class="idle">
+ <svg id="dino" viewBox="0 0 200 190" role="img" aria-label="귀여운 공룡">
+  <ellipse cx="100" cy="182" rx="58" ry="6" fill="#000" opacity=".15"/>
+  <g id="tail"><path d="M150 142 Q196 152 186 116 Q178 136 150 126Z" fill="#6bbd5a" stroke="#2f4a2a" stroke-width="4" stroke-linejoin="round"/></g>
+  <ellipse cx="100" cy="130" rx="58" ry="50" fill="#7ccf6a" stroke="#2f4a2a" stroke-width="4"/>
+  <ellipse cx="100" cy="142" rx="34" ry="33" fill="#f4f9b8"/>
+  <g fill="#5fb04e" stroke="#2f4a2a" stroke-width="3" stroke-linejoin="round"><path d="M70 62 L80 40 L92 62Z"/><path d="M96 56 L108 32 L120 56Z"/><path d="M124 62 L136 42 L142 68Z"/></g>
+  <path d="M52 138 Q40 148 50 158" fill="none" stroke="#2f4a2a" stroke-width="4" stroke-linecap="round"/>
+  <g id="armR"><path d="M148 136 Q162 146 152 158" fill="none" stroke="#2f4a2a" stroke-width="4" stroke-linecap="round"/></g>
+  <ellipse cx="100" cy="85" rx="56" ry="46" fill="#7ccf6a" stroke="#2f4a2a" stroke-width="4"/>
+  <circle cx="76" cy="97" r="8" fill="#ff9fb0" opacity=".75"/><circle cx="124" cy="97" r="8" fill="#ff9fb0" opacity=".75"/>
+  <g id="eyes"><circle cx="80" cy="78" r="8" fill="#2f4a2a"/><circle cx="120" cy="78" r="8" fill="#2f4a2a"/><circle cx="83" cy="75" r="3" fill="#fff"/><circle cx="123" cy="75" r="3" fill="#fff"/></g>
+  <circle cx="93" cy="89" r="2" fill="#2f4a2a"/><circle cx="107" cy="89" r="2" fill="#2f4a2a"/>
+  <path id="mc" d="M90 103 Q100 112 110 103" fill="none" stroke="#2f4a2a" stroke-width="4" stroke-linecap="round"/>
+  <g id="mo"><path d="M80 97 Q100 140 120 97 Q100 91 80 97Z" fill="#a03a4a" stroke="#2f4a2a" stroke-width="4" stroke-linejoin="round"/><ellipse cx="100" cy="118" rx="10" ry="6" fill="#ff8a9c"/><path d="M86 97 l4 8 l4 -7Z M106 97 l4 7 l4 -8Z" fill="#fff"/></g>
+  <ellipse cx="78" cy="176" rx="18" ry="9" fill="#6bbd5a" stroke="#2f4a2a" stroke-width="4"/>
+  <ellipse cx="122" cy="176" rx="18" ry="9" fill="#6bbd5a" stroke="#2f4a2a" stroke-width="4"/>
+ </svg>
+ </div>
+</div>
+<div id="log" aria-live="polite"></div>
+<div id="chips"></div>
+<div id="bar">
+ <input id="inp" placeholder="공룡에게 말을 걸어봐" autocomplete="off" enterkeyhint="send">
+ <button id="go" type="button">말하기</button>
+</div>
+<script>
+var $=function(i){return document.getElementById(i)};
+var wrap=$('wrap'),dino=$('dino'),bub=$('bub'),log=$('log'),inp=$('inp'),stage=$('stage');
+var timer,idleT,snd=true,AC,me='';
+function roarText(n){return '크'+'아'.repeat(2+Math.min(n,10))+'앙'+'!'.repeat(1+Math.min(Math.floor(n/4),3))}
+
+/* ===== 친구들 반응: 이름만 쓰면 전용 반응, 이름 + 키워드(바보, 좋아, 안녕...)면 연동 =====
+   t=말풍선, a=행동 묘사, m=모션(roar stomp spin sleepy tilt shy wave), o=입 벌림(1/0), e=이모지 */
+var F={
+ '주호':{t:'주호다!! 크앙~!',a:'(손을 붕붕 흔듦)',m:'wave',o:0,e:'👋'},
+ '진서':{t:'진서... 크앙♡',a:'(부끄러워서 배배 꼬임)',m:'shy',o:0,e:'💚'},
+ '학건':{t:'학건! 쿵쿵 크앙!',a:'(신나서 쿵쾅)',m:'stomp',o:1,e:'💨'},
+ '동방':{t:'동방 크아아앙!!',a:'(괜히 포효)',m:'roar',o:1,e:'🔥'},
+ '수혁':{t:'수혁? 크앙?',a:'(고개 갸웃, 반가움)',m:'tilt',o:0,e:'❓'},
+ '성빈':{t:'성빈! 우다다다다',a:'(빙글빙글)',m:'spin',o:0,e:'🌀'}
+};
+var HI={t:'크앙~!',a:'(손을 흔듦)',m:'wave',o:0,e:'👋'},
+LOVE={t:'크앙♡',a:'(부끄러워서 배배 꼬임)',m:'shy',o:0,e:'💚'},
+FOOD={t:'냠냠 크앙?',a:'(입맛 다심)',m:'stomp',o:1,e:'🍖'},
+ZZZ={t:'크르르르...',a:'(꾸벅꾸벅)',m:'sleepy',o:0,e:'💤'},
+MAD={t:null,a:'(왜 화났는지 본인도 모름)',m:'roar',o:1,e:'💢'},
+ASK={t:'크앙?',a:'(고개 갸웃)',m:'tilt',o:0,e:'❓'};
+/* [키워드, 기본 반응, 이름이 같이 있을 때 말풍선({n}=이름)] */
+var KW=[
+ [/안녕|하이|hi|hello|반가/i,HI,'{n} 안녕! 크앙~!'],
+ [/사랑|좋아|귀여|예쁘|최고/,LOVE,'{n} 좋아! 크앙♡'],
+ [/배고|밥|먹|간식|고기/,FOOD,'{n} 밥 먹자! 냠냠 크앙?'],
+ [/졸|잠|자|피곤/,ZZZ,'{n}도 졸려? 크르르르...'],
+ [/바보|멍청|싫|미워|못생/,MAD,'{n} 바보!! 크아아앙!!']
+];
+var POOL=[{t:null,a:'(두 팔을 번쩍)',m:'roar',o:1,e:'✨'},{t:null,a:'(꼬리를 붕붕)',m:'roar',o:1,e:'✨'},{t:'어흥... 아니 크앙',a:'(헷갈림)',m:'roar',o:1,e:'❓'},{t:'쿵! 쿵! 쿵!',a:'(제자리 쿵쾅)',m:'stomp',o:0,e:'💨'},{t:'우다다다다',a:'(빙글빙글)',m:'spin',o:0,e:'🌀'},{t:'뿌우웅',a:'(방귀 아님)',m:'spin',o:0,e:'💨'},ASK];
+function pick(txt){
+ var hit=Object.keys(F).filter(function(k){return txt.indexOf(k)>-1});
+ var rest=txt;hit.forEach(function(k){rest=rest.split(k).join(' ')});
+ for(var i=0;i<KW.length;i++)if(KW[i][0].test(rest)){
+  var r=KW[i][1];
+  if(!hit.length)return r;
+  var n=hit.length>3?'다들':hit.join('랑');
+  return{t:KW[i][2].replace('{n}',n),a:r.a,m:r.m,o:r.o,e:r.e};
+ }
+ if(hit.length>2)return{t:'다 모였다!! 크아아앙!!',a:'(신나서 난리)',m:'roar',o:1,e:'🎉'};
+ if(hit.length===2)return{t:hit[0]+'랑 '+hit[1]+'! 크앙!!',a:'(둘 다 반가움)',m:'stomp',o:1,e:'🎉'};
+ if(hit.length===1)return F[hit[0]];
+ var nm=txt.match(/^(?:나는|난|내 이름은|저는)\s*([가-힣A-Za-z]{1,6}?)(?:이야|야|이에요|예요|입니다)?$/);
+ if(nm){me=nm[1];return{t:me+'! 크앙~!',a:'(이름 외우는 중... 금방 까먹음)',m:'wave',o:0,e:'👋',keep:1}}
+ if(/[?？]$/.test(txt)&&Math.random()<.6)return ASK;
+ return POOL[Math.floor(Math.random()*POOL.length)];
+}
+function fx(e,n){for(var i=0;i<n;i++){var s=document.createElement('span');s.className='fx';s.textContent=e;s.style.left=(30+Math.random()*40)+'%';s.style.top=(32+Math.random()*30)+'%';s.style.setProperty('--dx',(Math.random()*60-30)+'px');s.style.animationDelay=(i*.12)+'s';s.addEventListener('animationend',function(){this.remove()});stage.appendChild(s)}}
+function sound(n,o){
+ if(!snd)return;
+ try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();var t=AC.currentTime,d=.25+Math.min(n,10)*.05,
+ os=AC.createOscillator(),l=AC.createOscillator(),lg=AC.createGain(),f=AC.createBiquadFilter(),g=AC.createGain();
+ os.type='sawtooth';os.frequency.setValueAtTime(o?200:320,t);os.frequency.exponentialRampToValueAtTime(o?70:200,t+d);
+ l.frequency.value=28;lg.gain.value=o?25:8;l.connect(lg);lg.connect(os.frequency);
+ f.type='lowpass';f.frequency.value=o?900:1400;
+ g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.22,t+.03);g.gain.exponentialRampToValueAtTime(.001,t+d);
+ os.connect(f);f.connect(g);g.connect(AC.destination);os.start(t);l.start(t);os.stop(t+d);l.stop(t+d)}catch(e){}
+}
+function wake(){
+ clearTimeout(idleT);dino.classList.remove('sleep');
+ idleT=setTimeout(function(){dino.classList.add('sleep');bub.textContent='zzZ...';fx('💤',2)},25000);
+}
+function play(r,n){
+ clearTimeout(timer);wake();
+ wrap.setAttribute('class','');void wrap.getBoundingClientRect();
+ wrap.setAttribute('class',r.m);
+ dino.classList.toggle('open',!!r.o);
+ fx(r.e,r.m==='stomp'?3:2);
+ sound(n,r.o);
+ timer=setTimeout(function(){wrap.setAttribute('class','idle');dino.classList.remove('open')},900);
+}
+function add(c,h){var d=document.createElement('div');d.className='m '+c;d.innerHTML=h;log.appendChild(d);log.scrollTop=log.scrollHeight}
+function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function reply(r,n){
+ var t=r.t||roarText(n);
+ if(me&&!r.keep&&Math.random()<.3)t=me+'! '+t;
+ bub.textContent=t;bub.classList.remove('pop');void bub.offsetWidth;bub.classList.add('pop');
+ add('ai',esc(t)+'<small>'+r.a+'</small>');
+ play(r,n);
+}
+function send(){
+ var v=inp.value.trim();if(!v)return;
+ add('me',esc(v));inp.value='';wake();
+ setTimeout(function(){reply(pick(v),v.length)},350);
+}
+$('go').addEventListener('click',send);
+inp.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.isComposing)send()});
+wrap.addEventListener('click',function(){reply({t:'크앙!',a:'(간지러움)',m:'shy',o:0,e:'💚'},1)});
+$('mute').addEventListener('click',function(){snd=!snd;this.textContent=snd?'🔊':'🔇'});
+['안녕','배고파?','귀여워','졸려','바보'].forEach(function(w){
+ var b=document.createElement('button');b.className='chip';b.type='button';b.textContent=w;
+ b.addEventListener('click',function(){inp.value=w;send()});$('chips').appendChild(b)});
+add('ai','크앙?<small>(눈을 끔뻑끔뻑)</small>');
+wake();
+</script>
+</body>
+</html>

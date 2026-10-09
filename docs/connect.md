@@ -1,29 +1,45 @@
-# 서버 접속
+# 서버 접속 방법
 
-## 서버 정보
+Minecraft **26.2**, Fabric 기준입니다. 아래 순서대로 설치한 뒤 접속하세요.
 
-| 항목 | 내용 |
-| --- | --- |
-| 서버 주소 | **fried-holidays.tun.ply.gg** (포트를 별도로 안내받았다면 주소 뒤에 `:포트` 추가) |
-| 에디션 | Java Edition |
-| Minecraft 버전 | **26.2** |
-| 모드 로더 | Fabric |
+## 1. Fabric Loader 설치
 
-<a href="https://mcstatus.io/" title="mcstatus.io에서 서버 상태 조회">
-  <img src="https://api.mcstatus.io/v2/widget/java/fried-holidays.tun.ply.gg?dark=true" alt="Minecraft 서버 온라인 상태와 접속 인원" />
-</a>
+1. [Fabric Installer](https://fabricmc.net/use/installer/)에 접속해 **Download for Windows**를 받고 실행합니다.
+2. **Client** 탭에서 Minecraft 버전 **26.2**를 선택하고 **Install**을 누릅니다.
 
-## 접속 순서
+![Fabric Installer에서 Minecraft 26.2를 선택한 화면](/fabric-installer.webp)
 
-1. Minecraft 26.2와 서버에 맞는 Fabric Loader를 실행합니다.
-2. [모드 목록](/guide/mods)을 확인하고 클라이언트 설치가 필요한 모드를 설치합니다.
-3. 멀티플레이에서 서버 주소 `fried-holidays.tun.ply.gg`를 입력해 접속합니다.
+## 2. 클라이언트 모드 설치
 
-## 접속이 안 될 때
+1. 서버 운영자가 전달한 압축 파일을 풀고 `client_mod.zip`을 찾습니다.
+2. `Win + R`을 누르고 아래 경로를 입력해 mods 폴더를 엽니다.
 
-- Minecraft 버전과 Fabric Loader가 서버와 맞는지 확인합니다.
-- 위의 서버 상태 위젯에서 서버가 온라인인지 확인합니다.
-- 필수 클라이언트 모드가 빠지지 않았는지 [모드 목록](/guide/mods)을 확인합니다.
-- 포트를 별도로 안내받았다면 주소 뒤에 `:포트`를 붙여 입력합니다.
+   ```text
+   %appdata%\.minecraft\mods
+   ```
 
-문제가 계속되면 오류 화면이나 로그와 함께 운영자에게 알려 주세요.
+   `mods` 폴더가 없으면 직접 만듭니다.
+
+   ![실행 창에 mods 폴더 경로를 입력한 화면](/open-mods-folder.webp)
+
+3. `client_mod.zip`을 압축 해제해 안의 다섯 `.jar` 파일을 `mods` 폴더에 넣습니다. ZIP 파일이나 압축 해제된 하위 폴더가 아니라, `.jar` 파일이 `mods` 폴더 바로 안에 있어야 합니다.
+
+   ![mods 폴더 안에 있는 다섯 개의 모드 파일](/extract-client-mod.webp)
+
+## 3. 게임 실행 및 접속
+
+1. Minecraft 런처를 실행하고 플레이 버튼 왼쪽에서 **Fabric Loader 26.2** 프로필을 선택한 뒤 실행합니다.
+2. **멀티플레이**에서 **서버 추가** 또는 **직접 연결**을 선택합니다.
+3. 서버 주소를 입력해 접속합니다.
+
+   ```text
+   fried-holidays.tun.ply.gg
+   ```
+
+![서버 주소 입력 화면](/add-server.png)
+
+## 접속 문제 확인
+
+- Minecraft 버전이 **26.2**인지, 실행 프로필이 **Fabric Loader**인지 확인합니다.
+- 다섯 `.jar` 파일이 `%appdata%\.minecraft\mods` 폴더 바로 안에 있는지 확인합니다.
+- 서버가 온라인인지 [실시간 서버 상태](https://mcstatus.io/)를 확인합니다.

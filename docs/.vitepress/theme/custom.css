@@ -1,0 +1,52 @@
+:root {
+  --vp-c-brand-1: #3f7f36;
+  --vp-c-brand-2: #34702d;
+  --vp-c-brand-3: #285e23;
+  --vp-c-brand-soft: rgb(63 127 54 / 14%);
+}
+
+html.dark {
+  --vp-c-brand-1: #91cf7e;
+  --vp-c-brand-2: #a5dc94;
+  --vp-c-brand-3: #b8e6aa;
+  --vp-c-brand-soft: rgb(145 207 126 / 16%);
+}
+
+.vp-doc h2 {
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc table th {
+  background: var(--vp-c-bg-soft);
+}
+
+.server-status-card {
+  margin: 1.25rem 0 2rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--vp-c-divider);
+  border-left: 4px solid var(--vp-c-brand-1);
+  border-radius: 6px;
+  background: var(--vp-c-bg-soft);
+}
+
+.server-status-card > p {
+  margin: 0 0 0.75rem;
+}
+
+.server-status-card > a {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.server-status-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.server-status-card table {
+  display: table;
+  width: 100%;
+  margin: 0;
+}

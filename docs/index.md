@@ -1,41 +1,32 @@
 # 배려와 존중 서버 위키
 
-배려와 존중을 바탕으로 함께하는 소규모 마인크래프트 서버입니다.
+Minecraft **26.2 · Fabric · Java Edition**
 
-## 서버 정보 {#connect}
+## 서버 상태
 
 <div class="server-status-card">
   <p><strong>실시간 서버 상태</strong></p>
   <a href="https://mcstatus.io/" title="mcstatus.io에서 서버 상태 조회">
     <img src="https://api.mcstatus.io/v2/widget/java/fried-holidays.tun.ply.gg?dark=true" alt="Minecraft 서버 온라인 상태와 접속 인원" />
   </a>
-
-  <table>
-    <tbody>
-      <tr><th>서버 주소</th><td><strong>fried-holidays.tun.ply.gg</strong> </td></tr>
-      <tr><th>에디션</th><td>Java Edition</td></tr>
-      <tr><th>게임 버전</th><td><strong>26.2</strong></td></tr>
-      <tr><th>모드 로더</th><td>Fabric</td></tr>
-    </tbody>
-  </table>
+  <p>서버 주소: <strong>fried-holidays.tun.ply.gg</strong></p>
 </div>
 
-## 접속 방법
+## 최신 패치 노트
 
-Fabric Loader 설치부터 서버 접속까지의 [자세한 안내](/connect)를 확인하세요.
+**2026년 10월 9일 — 클라이언트 모드 안내** · [전체 패치 노트 보기](/updates)
 
 ## 서버 규칙
 
-- 우리 모두 배려와 존중하는 마음을 가집시다.
-- 상자 정리를 꾸준히 합시다.
-- 서버를 터트리지 맙시다.
-- 치트를 남용하지 맙시다.
+- 서로 배려하고 존중합니다.
+- 상자를 꾸준히 정리합니다.
+- 서버를 고의로 터뜨리거나 망가뜨리지 않습니다.
+- 치트를 남용하지 않습니다.
 
-## 모드 목록 {#mods}
+<details>
+<summary>서버 설치 모드 (23개)</summary>
 
-Fabric 26.2 모드 설치 목록입니다. 2026년 10월 9일 설치 폴더 기준입니다.
-
-### 서버 설치 모드
+2026년 10월 9일 서버 설치 폴더 기준입니다.
 
 | 모드 | 설명 |
 | --- | --- |
@@ -63,7 +54,12 @@ Fabric 26.2 모드 설치 목록입니다. 2026년 10월 9일 설치 폴더 기�
 | [Traveler's Backpack](https://modrinth.com/mod/travelersbackpack) | 배낭 콘텐츠 |
 | [Waystones](https://modrinth.com/mod/waystones) | 웨이스톤 이동 |
 
-### 클라이언트 설치 모드
+</details>
+
+<details>
+<summary>클라이언트 설치 모드 (16개)</summary>
+
+2026년 10월 9일 클라이언트 설치 폴더 기준입니다.
 
 | 모드 | 설명 |
 | --- | --- |
@@ -83,3 +79,9 @@ Fabric 26.2 모드 설치 목록입니다. 2026년 10월 9일 설치 폴더 기�
 | [Shogi](https://modrinth.com/mod/shogi) | Waystones 라이브러리 |
 | [Traveler's Backpack](https://modrinth.com/mod/travelersbackpack) | 배낭 콘텐츠 |
 | [Waystones](https://modrinth.com/mod/waystones) | 웨이스톤 이동 |
+
+</details>
+
+
+
+접속 설치 단계는 [접속 방법](/connect), 자주 쓰는 게임·Docker 명령어는 [명령어 안내](/commands)에서 확인하세요.

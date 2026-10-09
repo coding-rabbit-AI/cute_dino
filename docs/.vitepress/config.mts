@@ -21,9 +21,8 @@ export default defineConfig({
     siteTitle: '배려와 존중',
     nav: [
       { text: '접속', link: '/connect' },
-      { text: '모드', link: '/guide/mods' },
       { text: '명령어', link: '/commands' },
-      { text: '규칙', link: '/rules' }
+      { text: '패치 노트', link: '/updates' }
     ],
     sidebar: false,
     socialLinks: [

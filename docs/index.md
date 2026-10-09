@@ -3,27 +3,27 @@ layout: home
 
 hero:
   name: Cute Dino
-  text: 마인크래프트 서버 위키
-  tagline: 접속 방법부터 규칙, 플레이 팁까지 한곳에 모았습니다.
+  text: 소규모 마인크래프트 서버
+  tagline: 친구 10명이 함께하는 서버의 접속 정보와 모드 안내입니다.
   actions:
     - theme: brand
-      text: 접속 방법 보기
+      text: 접속 방법
       link: /connect
     - theme: alt
-      text: 서버 규칙
-      link: /rules
+      text: 모드 목록
+      link: /guide/mods
 
 features:
   - icon: 🔌
-    title: 쉬운 접속
-    details: 서버 주소와 버전만 확인하면 바로 들어올 수 있어요.
+    title: 서버 접속
+    details: 게임 버전과 접속 방법을 확인하세요.
     link: /connect
-  - icon: 🛡️
-    title: 내 땅은 내가 지킨다
-    details: 영역 보호와 홈 설정으로 건축물을 안전하게 지키세요.
-    link: /guide/protection
+  - icon: 🧩
+    title: 설치 모드
+    details: 서버와 클라이언트 설치 위치, Modrinth 링크를 확인하세요.
+    link: /guide/mods
   - icon: ⌨️
-    title: 명령어 모음
-    details: 자주 쓰는 명령어를 한 페이지에 정리했습니다.
+    title: 명령어
+    details: 자주 쓰는 기본 명령어와 모드 명령어를 모았습니다.
     link: /commands
 ---

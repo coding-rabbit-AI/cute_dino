@@ -1,35 +1,31 @@
+import { env } from 'node:process'
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'ko-KR',
-  title: 'Cute Dino 소규모 서버 위키',
-  description: '서버 접속, 설치 모드, 명령어를 안내합니다.',
+  title: '배려와 존중 서버 위키',
+  description: '배려와 존중 마인크래프트 서버의 접속 정보와 모드 안내입니다.',
   base: '/cute_dino/',
   cleanUrls: true,
   lastUpdated: true,
+  vite: {
+    define: {
+      __WIKI_VERSION__: JSON.stringify(env.GITHUB_SHA ?? 'development')
+    }
+  },
 
   head: [['link', { rel: 'icon', href: '/cute_dino/favicon.svg' }]],
 
   themeConfig: {
     logo: '/favicon.svg',
-    siteTitle: '🦖 Cute Dino',
+    siteTitle: '배려와 존중',
     nav: [
       { text: '접속', link: '/connect' },
       { text: '모드', link: '/guide/mods' },
       { text: '명령어', link: '/commands' },
       { text: '규칙', link: '/rules' }
     ],
-    sidebar: [
-      {
-        text: '서버 안내',
-        items: [
-          { text: '서버 접속', link: '/connect' },
-          { text: '설치 모드', link: '/guide/mods' },
-          { text: '명령어', link: '/commands' },
-          { text: '서버 규칙', link: '/rules' }
-        ]
-      }
-    ],
+    sidebar: false,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/coding-rabbit-AI/cute_dino' }
     ],

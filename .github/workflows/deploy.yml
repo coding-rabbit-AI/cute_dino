@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Write deployment version
+        run: printf '%s\n' "$GITHUB_SHA" > docs/public/version.txt
+
       - name: Build
         run: npm run build
 

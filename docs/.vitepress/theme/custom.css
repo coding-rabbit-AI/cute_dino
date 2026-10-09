@@ -21,6 +21,15 @@ html.dark {
   background: var(--vp-c-bg-soft);
 }
 
+.vp-doc .custom-block {
+  border-radius: 10px;
+}
+
+.vp-doc .custom-block.info,
+.vp-doc .custom-block.tip {
+  padding: 1rem 1.25rem;
+}
+
 .server-status-card {
   margin: 1.25rem 0 2rem;
   padding: 1rem 1.25rem;

@@ -31,8 +31,6 @@ Minecraft **26.2 · Fabric · Java Edition**
 - 서버를 고의로 터뜨리거나 망가뜨리지 않습니다.
 - 치트를 남용하지 않습니다.
 
-<p><p>
-
 ---
 <details>
 <summary>서버 설치 모드 (23개)</summary>

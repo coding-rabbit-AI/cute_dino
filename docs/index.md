@@ -11,6 +11,12 @@ Minecraft **26.2 · Fabric · Java Edition**
 
 ## 최신 패치 노트
 
+::: tip 2026년 10월 10일 · 신규 모드 추가
+주민 이동, 나무 벌목, 게임 정보 표시, 가구 및 동적 조명 모드를 추가했어요.
+
+[패치 노트 자세히 보기 →](/updates)
+:::
+
 ::: tip 2026년 10월 10일 · 핑 개선 및 주소 변경
 네트워크를 직결해 핑을 압도적으로 빠르게 개선했습니다. 서버 접속 주소도 변경됐으니, 새 주소는 디스코드에서 확인해 주세요.
 
@@ -36,15 +42,16 @@ Minecraft **26.2 · Fabric · Java Edition**
 
 ---
 <details>
-<summary>서버 설치 모드 (23개)</summary>
+<summary>서버 설치 모드 (27개)</summary>
 
-2026년 10월 9일 서버 설치 폴더 기준입니다.
+2026년 10월 10일 서버 설치 폴더 기준입니다.
 
 | 모드 | 설명 |
 | --- | --- |
 | [AppleSkin](https://modrinth.com/mod/appleskin) | 음식 회복량·포만감 HUD |
 | [Architectury API](https://modrinth.com/mod/architectury-api) | 모드 기반 API |
 | [Balm](https://modrinth.com/mod/balm) | Waystones 라이브러리 |
+| [Carry On](https://modrinth.com/mod/carry-on) | 주민 등 일부 대상을 들어서 이동 |
 | [C2ME](https://modrinth.com/mod/c2me-fabric) | 청크 최적화 |
 | [Cloth Config API](https://modrinth.com/mod/cloth-config) | 모드 설정 화면 라이브러리 |
 | [Collective](https://modrinth.com/mod/collective) | 편의 모드 라이브러리 |
@@ -55,29 +62,33 @@ Minecraft **26.2 · Fabric · Java Edition**
 | [FerriteCore](https://modrinth.com/mod/ferrite-core) | 메모리 최적화 |
 | [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port) | 설정 호환 라이브러리 |
 | [Inventory Sorting](https://modrinth.com/mod/inventory-sorting) | 인벤토리 정렬 |
+| [Jade](https://modrinth.com/mod/jade) | 블록·엔티티 정보 표시 |
 | [Krypton](https://modrinth.com/mod/krypton) | 네트워크 최적화 |
 | [Lithium](https://modrinth.com/mod/lithium) | 게임 로직 최적화 |
+| [Macaw's Furniture (MCW Furniture)](https://modrinth.com/mod/mcw-furniture) | 가구 추가 |
 | [More Delight](https://modrinth.com/mod/more-delight) | 추가 요리 |
 | [Replanting Crops](https://modrinth.com/mod/replanting-crops) | 작물 자동 재심기 |
 | [Roughly Enough Items (REI)](https://modrinth.com/mod/rei) | 아이템·조합법 검색 |
 | [Rustic Delight](https://modrinth.com/mod/rustic-delight) | 요리·작물 확장 |
 | [Shogi](https://modrinth.com/mod/shogi) | Waystones 라이브러리 |
 | [spark](https://modrinth.com/mod/spark) | 서버 성능 진단 |
+| [Tree Harvester](https://modrinth.com/mod/tree-harvester) | 나무를 한 번에 벌목 |
 | [Traveler's Backpack](https://modrinth.com/mod/travelersbackpack) | 배낭 콘텐츠 |
 | [Waystones](https://modrinth.com/mod/waystones) | 웨이스톤 이동 |
 
 </details>
 
 <details>
-<summary>클라이언트 설치 모드 (16개)</summary>
+<summary>클라이언트 설치 모드 (20개)</summary>
 
-2026년 10월 9일 클라이언트 설치 폴더 기준입니다.
+2026년 10월 10일 클라이언트 설치 폴더 기준입니다.
 
 | 모드 | 설명 |
 | --- | --- |
 | [AppleSkin](https://modrinth.com/mod/appleskin) | 음식 회복량·포만감 HUD |
 | [Architectury API](https://modrinth.com/mod/architectury-api) | 모드 기반 API |
 | [Balm](https://modrinth.com/mod/balm) | Waystones 라이브러리 |
+| [Carry On](https://modrinth.com/mod/carry-on) | 주민 등 일부 대상을 들어서 이동 |
 | [Cloth Config API](https://modrinth.com/mod/cloth-config) | 모드 설정 화면 라이브러리 |
 | [Crate Delight](https://modrinth.com/mod/crate-delight) | 음식·작물 보관 상자 |
 | DelightLib | Delight 계열 모드 라이브러리 |
@@ -85,6 +96,9 @@ Minecraft **26.2 · Fabric · Java Edition**
 | [Farmer's Delight Refabricated](https://modrinth.com/mod/farmers-delight-refabricated) | 농사·요리 콘텐츠 |
 | [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port) | 설정 호환 라이브러리 |
 | [Inventory Sorting](https://modrinth.com/mod/inventory-sorting) | 인벤토리 정렬 |
+| [Jade](https://modrinth.com/mod/jade) | 블록·엔티티 정보 표시 |
+| [LambDynamicLights](https://modrinth.com/mod/lambdynamiclights) | 손에 든 횃불 등 광원 효과 추가 |
+| [Macaw's Furniture (MCW Furniture)](https://modrinth.com/mod/mcw-furniture) | 가구 추가 |
 | [More Delight](https://modrinth.com/mod/more-delight) | 추가 요리 |
 | [Roughly Enough Items (REI)](https://modrinth.com/mod/rei) | 아이템·조합법 검색 |
 | [Rustic Delight](https://modrinth.com/mod/rustic-delight) | 요리·작물 확장 |

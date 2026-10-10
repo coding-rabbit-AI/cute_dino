@@ -2,17 +2,20 @@
 
 Minecraft **26.2 · Fabric · Java Edition**
 
-## 서버 상태
+## 서버 주소 안내
 
 <div class="server-status-card">
-  <p><strong>실시간 서버 상태</strong></p>
-  <a href="https://mcstatus.io/" title="mcstatus.io에서 서버 상태 조회">
-    <img src="https://api.mcstatus.io/v2/widget/java/fried-holidays.tun.ply.gg?dark=true" alt="Minecraft 서버 온라인 상태와 접속 인원" />
-  </a>
-  <p>서버 주소: <strong>fried-holidays.tun.ply.gg</strong></p>
+  <p>서버 주소가 <strong>직결로</strong>로 변경됐어요.</p>
+  <p>새 접속 주소는 <strong>디스코드에서 확인해 주세요.</strong></p>
 </div>
 
 ## 최신 패치 노트
+
+::: tip 2026년 10월 10일 · 핑 개선 및 주소 변경
+네트워크를 직결해 핑을 압도적으로 빠르게 개선했습니다. 서버 접속 주소도 변경됐으니, 새 주소는 디스코드에서 확인해 주세요.
+
+[패치 노트 자세히 보기 →](/updates)
+:::
 
 ::: tip 2026년 10월 9일 · 클라이언트 모드 안내
 클라이언트에 설치하면 좋은 모드와 주요 기능을 보기 쉽게 정리했어요.

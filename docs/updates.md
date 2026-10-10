@@ -8,17 +8,19 @@
 
 서버와 클라이언트에 새로운 모드를 추가했어요.
 
-**서버**
-- **Carry On** — 주민 등 일부 대상을 들어서 이동할 수 있어요.
-- **Tree Harvester** — 나무를 한 번에 벌목할 수 있어요.
-- **Jade** — 바라보는 블록이나 엔티티의 정보를 화면에 표시해요.
-- **Macaw's Furniture (MCW Furniture)** — 다양한 가구를 추가해요.
+::: info 🖥️ 서버 추가 모드
+- [**Carry On**](https://modrinth.com/mod/carry-on) — 주민 등 일부 대상을 들어서 이동할 수 있어요.
+- [**Tree Harvester**](https://modrinth.com/mod/tree-harvester) — 나무를 한 번에 벌목할 수 있어요.
+- [**Jade**](https://modrinth.com/mod/jade) — 바라보는 블록이나 엔티티의 정보를 화면에 표시해요.
+- [**Macaw's Furniture (MCW Furniture)**](https://modrinth.com/mod/mcw-furniture) — 다양한 가구를 추가해요.
+:::
 
-**클라이언트**
-- **Carry On** — 주민 등 일부 대상을 들어서 이동할 수 있어요.
-- **LambDynamicLights** — 손에 든 횃불 등 광원이 주변을 밝혀요.
-- **Jade** — 바라보는 블록이나 엔티티의 정보를 화면에 표시해요.
-- **Macaw's Furniture (MCW Furniture)** — 다양한 가구를 추가해요.
+::: info 🧰 클라이언트 추가 모드
+- [**Carry On**](https://modrinth.com/mod/carry-on) — 주민 등 일부 대상을 들어서 이동할 수 있어요.
+- [**LambDynamicLights**](https://modrinth.com/mod/lambdynamiclights) — 손에 든 횃불 등 광원이 주변을 밝혀요.
+- [**Jade**](https://modrinth.com/mod/jade) — 바라보는 블록이나 엔티티의 정보를 화면에 표시해요.
+- [**Macaw's Furniture (MCW Furniture)**](https://modrinth.com/mod/mcw-furniture) — 다양한 가구를 추가해요.
+:::
 
 ### 핑 개선 및 서버 주소 변경
 
